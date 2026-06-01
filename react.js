@@ -68,6 +68,30 @@
       )
     );
 
+  const SkillLevel = ({ percent }) =>
+    e(
+      'div',
+      { className: 'skill-level' },
+      e(
+        'div',
+        { className: 'skill-level-header' },
+        e('span', { className: 'skill-level-label' }, 'Proficiency'),
+        e('span', { className: 'skill-percent' }, `${percent}%`)
+      ),
+      e(
+        'div',
+        {
+          className: 'progress-bar',
+          style: { '--progress': `${percent}%` },
+          role: 'progressbar',
+          'aria-valuenow': percent,
+          'aria-valuemin': 0,
+          'aria-valuemax': 100,
+        },
+        e('span', { className: 'progress-fill' })
+      )
+    );
+
   const SkillsPage = () =>
     PageSection(
       { className: 'section skills', id: 'skills' },
@@ -83,14 +107,14 @@
             { className: 'skill-card reveal' },
             e('h3', null, 'Programming'),
             e('p', null, 'JavaScript, Python, Java, and C#.'),
-            e('div', { className: 'progress-bar' }, e('span', { style: { width: '36%' } }))
+            e(SkillLevel, { percent: 36 })
           ),
           e(
             'article',
             { className: 'skill-card reveal' },
             e('h3', null, 'Web Development'),
             e('p', null, 'HTML, and CSS.'),
-            e('div', { className: 'progress-bar' }, e('span', { style: { width: '47%' } }))
+            e(SkillLevel, { percent: 47 })
           )
         )
       )
