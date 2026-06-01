@@ -300,7 +300,7 @@ textarea {
 
 .skill-card.reveal.active .progress-fill,
 .skill-card:not(.reveal) .progress-fill {
-  width: var(--progress);
+  width: calc(var(--progress, 0) * 1%);
 }
 
 .timeline {

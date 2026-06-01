@@ -82,7 +82,7 @@
         'div',
         {
           className: 'progress-bar',
-          style: { '--progress': `${percent}%` },
+          style: { '--progress': percent },
           role: 'progressbar',
           'aria-valuenow': percent,
           'aria-valuemin': 0,
