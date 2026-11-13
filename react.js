@@ -27,7 +27,7 @@
         e(
           'p',
           { className: 'hero-description' },
-          'A 3rd Year student who tries to learn how to code and design websites that are both functional and visually appealing. I am passionate about creating engaging digital experiences and am focused on strengthening my skills in web development and building clean, modern interfaces.'
+          "A 4th Year IT student who's looking for a job that relates to IT jobs."
         ),
         e(
           'div',
