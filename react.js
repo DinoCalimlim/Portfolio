@@ -19,11 +19,19 @@
     PageSection(
       { className: 'hero section', id: 'home' },
       e(
+        React.Fragment,
+        null,
+        e('img', {
+          className: 'hero-photo reveal',
+          src: 'assets/profile-placeholder.svg',
+          alt: 'Portrait of Dino Luis Calimlim',
+        }),
+        e(
         'div',
         { className: 'hero-content reveal' },
         e('p', { className: 'eyebrow' }, 'Hello, I’m'),
         e('h1', null, 'Dino Luis Calimlim'),
-        e('p', { className: 'hero-title' }, 'BSIT 601'),
+        e('p', { className: 'hero-title' }, 'BSIT 702'),
         e(
           'p',
           { className: 'hero-description' },
@@ -34,6 +42,7 @@
           { className: 'hero-actions' },
           e('a', { href: 'about.html', className: 'btn btn-primary' }, 'About Me'),
           e('a', { href: 'contact.html', className: 'btn btn-secondary' }, 'Contact Me')
+        )
         )
       )
     );
